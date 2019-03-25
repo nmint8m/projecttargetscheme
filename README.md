@@ -80,7 +80,7 @@ When we build with target:
 - ProductOne -> print `debug.productone.t8m.dev`
 - ProductTwo -> print `debug.producttwo.t8m.dev`
 
-Reference:
+**Reference:**
 > [Xcode “Targets” with multiple build configurations](https://medium.com/@andersongusmao/xcode-targets-with-multiples-build-configuration-90a575ddc687)
 
 ### AppIcon for each target
@@ -115,7 +115,7 @@ pod 'AFNetworking'
 
 3. If you use continuous integration system such as Travis CI or Jenkins, don’t forget to configure to build and deliver both targets.
 
-Reference:
+**Reference:**
 > [How to Use Xcode Targets to Manage Development and Production Builds](https://www.appcoda.com/using-xcode-targets)
 
 ## Using Xcode Configuration File (.xcconfig) to Manage Different Build Settings
@@ -191,7 +191,7 @@ func infoForKey(_ key: String) -> String? {
 
 To switch between build configurations, you can simply change the scheme by holding the option key and click on the scheme at the top. You can then select your preferred build configuration.
 
-Reference:
+**Reference:**
 > [Using Xcode Configuration File (.xcconfig) to Manage Different Build Settings](https://www.appcoda.com/xcconfig-guide/)
 
 ## Adding settings to your iOS app
@@ -309,9 +309,10 @@ final class RootVC: UIViewController {
 Results:
 
 <center>
-<img src="./Images/img-setting2.png" height="400">
-<img src="./Images/img-setting3.png" height="400">
-<img src="./Images/img-setting4.png" height="400">
+<img src="./Images/img-setting2.png" height="450">
+<img src="./Images/img-setting3.png" height="450">
+<img src="./Images/img-setting4.png" height="450">
 </center>
 
-Reference: [Adding settings to your iOS app](https://medium.com/@abhimuralidharan/adding-settings-to-your-ios-app-cecef8c5497)
+**Reference:**
+> [Adding settings to your iOS app](https://medium.com/@abhimuralidharan/adding-settings-to-your-ios-app-cecef8c5497)
