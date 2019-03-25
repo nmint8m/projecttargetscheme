@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  DemoConfigUserDefined
+//  DemoConfigXCConfig
 //
-//  Created by Tam Nguyen M. on 3/24/19.
+//  Created by Tam Nguyen M. on 3/25/19.
 //  Copyright © 2019 Tam Nguyen M. All rights reserved.
 //
 
@@ -18,18 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         window?.rootViewController = UIViewController()
-        print(Config.endpoint)
+        print(Config.info)
+        #if ST
+        print("ST")
+        #else
+        print("ND")
+        #endif
         return true
     }
 }
 
 class Config {
-    static var endpoint: String {
+    static var info: String {
         get {
             guard let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
                 let dic = NSDictionary(contentsOfFile: path),
-                let endpoint = dic["ENDPOINT_URL"] as? String else { return "No endpoint in Info.plist" }
-            return endpoint
+                let property = dic["A_PROPERTY"] as? String else { return "No property in Info.plist" }
+            return property
         }
     }
 }

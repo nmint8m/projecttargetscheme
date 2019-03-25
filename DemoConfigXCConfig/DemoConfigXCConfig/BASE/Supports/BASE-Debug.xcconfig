@@ -1,5 +1,5 @@
 //
-//  CORE-Release.xcconfig
+//  CORE-Config.xcconfig
 //  DemoConfigUserDefined
 //
 //  Created by Tam Nguyen M. on 3/25/19.
@@ -9,4 +9,9 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "RELEASE" "-D" "$(TARGET_NAME)"
+B_APP_NAME = Base-Debug
+B_APP_VERSION = 1.0.1
+B_BUNDLE_IDENTIFIER = dev.t8m.debug-base
+OTHER_SWIFT_FLAGS = "-D" "DEBUG" "-D" "$(TARGET_NAME)"
+
+A_PROPERTY = Debug
