@@ -1,0 +1,12 @@
+//
+//  CORE-Config.xcconfig
+//  DemoConfigUserDefined
+//
+//  Created by Tam Nguyen M. on 3/25/19.
+//  Copyright © 2019 Tam Nguyen M. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "DEBUG" "-D" "$(TARGET_NAME)"
