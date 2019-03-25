@@ -4,6 +4,7 @@
 
 - [Demo Xcode “Targets” with multiple build configurations](#demo-xcode-targets-with-multiple-build-configurations)
 - [Using Xcode Configuration File (.xcconfig) to Manage Different Build Settings](#using-xcode-configuration-file-xcconfig-to-manage-different-build-settings)
+- [Adding settings to your iOS app](#adding-settings-to-your-ios-app)
 
 ## Demo Xcode “Targets” with multiple build configurations
 
@@ -193,5 +194,124 @@ To switch between build configurations, you can simply change the scheme by hold
 Reference:
 > [Using Xcode Configuration File (.xcconfig) to Manage Different Build Settings](https://www.appcoda.com/xcconfig-guide/)
 
+## Adding settings to your iOS app
 
+> Normally all my apps used to have login and logout option. So , to reset the app data I just had to click on logout button and it will call a routine function which will clear all the database data and userdefaults data. But, in one of the apps that I have made recently, I wanted to reset the app data once in a while. But the saddest part is that it didn’t had a login/logout option. Also, I didn’t want to add any button from inside the app to clear the data. This app had facebook and google subscription button in two different places inside the app which will go away once the subscription is successful. So, the testers had to reinstall the app four times to check this feature every time. I wanted to add a reset button so that testers can test this feature without uninstalling the app.
+> 
+> I also wanted to add the version and build number in the settings.
 
+In iOS, the Foundation framework provides the low-level mechanism for storing the preference data. Apps then have two options for presenting preferences:
+
+- Display preferences inside the app.
+- Use a Settings bundle to manage preferences from the Settings app.
+
+This what apple says in the [official docs](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html).
+
+So an app can either show the settings inside the app or in the phone settings. Which option you choose depends on how you expect users to interact with preferences. The Settings bundle is generally the preferred mechanism for displaying preferences. However, games and other apps that contain configuration options or other frequently accessed preferences might want to present them inside the app instead. Regardless of how you present them, you use the NSUserDefaults class to access preference values from your code.
+
+Every app with a Settings bundle has at least one page of preferences, referred to as the main page. If your app has only a few preferences, the main page may be the only one you need. If the number of preferences gets too large to fit on the main page, however, you can create child pages that link off the main page or other child pages. There is no specific limit to the number of child pages you can create, but you should strive to keep your preferences as simple and easy to navigate as possible.
+
+A Settings bundle has the name Settings.bundle and resides in the top-level directory of your app’s bundle. This bundle contains one or more Settings page files that describe the individual pages of preferences. It may also include other support files needed to display your preferences, such as images or localized strings.
+
+> You can localize the Info.plist file and show the settings in your desired language.Please read more in the [official docs](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html).
+
+### Adding the Settings Bundle
+
+To add a Settings bundle to your Xcode project:
+
+- Choose File > New > New File.
+- Under iOS, choose Resource, and then select the Settings Bundle template.
+- Name the file Settings.bundle.
+
+In addition to adding a new Settings bundle to your project, Xcode automatically adds that bundle to the Copy Bundle Resources build phase of your app target. Thus, all you have to do is modify the property list files of your Settings bundle and add any needed resources.
+
+Click on the Root.plist file
+
+The preference items is an array of dictionaries of controls . Go to Fig 1 to know what all controls we can add in our settings app bundle.
+
+For this demo app, I only need one group, one title for showing the app version number , one title for showing the build number and one toggle switch for resetting the app. So delete all the items in the preference items array and add the above mentioned items.
+
+<center>
+<img src="./Images/img-setting1.png" height="500">
+</center>
+
+The identifier is the Userdefaults key that you can use inside the code to do the appropriate changes. Don’t forget to add the default values for Title. It will not appear in the settings otherwise.
+
+Tip: If you are concerned about the order of the controls in the plist, Right click on the plist file and open as source code. It is easy to edit the xml instead of the plist directly.
+
+```swift
+class SettingsBundleHelper {
+
+    struct SettingsBundleKeys {
+        static let kReset = "K_RESET_APP"
+        static let kBuild = "K_APP_BUILD"
+        static let kVersion = "K_APP_VERSION"
+        static let kCopyright = "K_APP_COPYRIGHT"
+        static let kEndpoint = "K_APP_ENDPOINT"
+    }
+
+    struct InforKeys {
+        static let kBuild = "IS_APP_BUILD"
+        static let kVersion = "IS_APP_VERSION"
+        static let kCopyright = "IS_APP_COPYRIGHT"
+    }
+
+    static func checkAndExecuteSettings() {
+        if ud.bool(forKey: SettingsBundleKeys.kReset) {
+            ud.set(false, forKey: SettingsBundleKeys.kReset)
+        }
+    }
+
+    static func setVersionAndBuildNumber() {
+        let build = getInfo(key: InforKeys.kBuild)
+        let version = getInfo(key: InforKeys.kVersion)
+        let copyright = getInfo(key: InforKeys.kCopyright)
+
+        ud.set(build, forKey: SettingsBundleKeys.kBuild)
+        ud.set(version, forKey: SettingsBundleKeys.kVersion)
+        ud.set(copyright, forKey: SettingsBundleKeys.kCopyright)
+    }
+
+    static func getInfo(key: String) -> String {
+        guard let dic = Bundle.main.infoDictionary,
+            let value = dic[key] as? String else { return "" }
+        return value
+    }
+}
+```
+
+In this case, `IS_APP_BUILD`, `IS_APP_VERSION`, `IS_APP_COPYRIGHT` are define in file `*.xcconfig` as mentioned above.
+
+```swift
+final class RootVC: UIViewController {
+
+    @IBOutlet private weak var endpointLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configObserver()
+    }
+
+    private func configObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(udChanged), name: UserDefaults.didChangeNotification, object: nil)
+    }
+
+    @objc private func udChanged() {
+        if let endpoint = ud.string(forKey: SettingsBundleHelper.SettingsBundleKeys.kEndpoint) {
+            endpointLabel.text = endpoint
+        } else {
+            endpointLabel.text = "Error!"
+        }
+    }
+}
+```
+
+Results:
+
+<center>
+<img src="./Images/img-setting2.png" height="400">
+<img src="./Images/img-setting3.png" height="400">
+<img src="./Images/img-setting4.png" height="400">
+</center>
+
+Reference: [Adding settings to your iOS app](https://medium.com/@abhimuralidharan/adding-settings-to-your-ios-app-cecef8c5497)
