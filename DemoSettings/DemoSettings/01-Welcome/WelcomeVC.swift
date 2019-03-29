@@ -101,7 +101,7 @@ final class WelcomeVC: UIViewController {
     }
 
     private func configEndpointLabel() {
-        if let endpoint = SettingManager.shared.getSettingStringValue(forSettingKey: SettingManager.SettingKey.kEndpoint) {
+        if let endpoint = SettingsManager.shared.getSettingStringValue(forSettingKey: SettingsManager.SettingKey.kEndpoint) {
             endpointLabel.text = endpoint
         } else {
             endpointLabel.text = "[No endpoint]"

@@ -28,7 +28,7 @@ enum InfoKey: String {
     case kEndpoint = "K_APP_ENDPOINT"
 }
 
-final class SettingManager {
+final class SettingsManager {
 
     /// Defined the same as in Root.plist
     ///
@@ -49,7 +49,7 @@ final class SettingManager {
         case kEndpoint = "SK_APP_ENDPOINT"
     }
 
-    static let shared = SettingManager()
+    static let shared = SettingsManager()
 
     private init() {}
 
@@ -99,7 +99,7 @@ final class SettingManager {
             return
         }
 
-        if let newEndpoint = getSettingStringValue(forSettingKey: SettingManager.SettingKey.kEndpoint),
+        if let newEndpoint = getSettingStringValue(forSettingKey: SettingsManager.SettingKey.kEndpoint),
             let oldEndpoint = getSettingStringValue(forInfoKey: InfoKey.kEndpoint),
             newEndpoint != oldEndpoint {
             change(newEndpoint, forInfoValueWith: .kEndpoint)

@@ -25,13 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
 
-        SettingManager.shared.configAppSetting()
+        SettingsManager.shared.configAppSetting()
         window?.rootViewController = WelcomeVC()
         return true
     }
 
     func restart() {
-        SettingManager.shared.configAppSetting()
+        SettingsManager.shared.configAppSetting()
         window?.rootViewController = WelcomeVC()
     }
 }
