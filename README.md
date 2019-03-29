@@ -21,8 +21,3 @@ _Written by: **Nguyen Minh Tam**_
 [Targets]: ./WorkingWithMultipleTargets.md
 [Xcconfig]: ./UsingXCConfig.md
 [Settings]: ./UsingSettingsBundle.md
-
-## Reference
-
-- [Xcode Concepts](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Targets.html)
-- [Xcode Overview](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/index.html)
