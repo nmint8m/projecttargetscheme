@@ -186,8 +186,16 @@ final class SettingsManager {
 - If the toggle switch reset is on (key: `SettingKey.kReset`), then clean all saved data, like: endpoint (key: `SettingKey. kEndpoint`) and app states (key: `InfoKey. kDidOpenApp`).
 - If not:
 	-  Get values of Version, Build, Copyright from `Info.plist`, and set for Settings.
-		
+	-  For values which can be changed by users, in this case is endpoint (or theme / ...), we will check if it exists in User defaults values, set it for Settings, if not then set default value for both Setting and User defaults.
+	-  The last but not least, we config observer for `SettingManager`, everytime User defaults values changed, do these things:
+		- If the toggle switch reset is on, clean all data and restart app (by set new root view controller).
+		- If endpoint in Settings was changed, set new endpoint value to User defaults.
+
+This is how we get values of Version, Build, Copyright from `Info.plist`, and set for Settings:
+
 ```
+final class SettingsManager {
+	 ...
     private func change(getValueWith ipKey: InfoKey, setForSettingValueWith sKey: SettingKey) {
         guard let ipValue = getInfoPlistStringValue(forInfoKey: ipKey) else { return }
         change(ipValue, forSettingValueWith: sKey)
@@ -206,14 +214,15 @@ final class SettingsManager {
             ud.removeObject(forKey: key.rawValue)
         }
     }
+    ...
+}
 ```
 
-	-  For values which can be changed by users, in this case is endpoint (or theme / ...), we will check if it exists in User defaults values, set it for Settings, if not then set default value for both Setting and User defaults.
-	-  The last but not least, we config observer for `SettingManager`, everytime User defaults values changed, do these things:
-		- If the toggle switch reset is on, clean all data and restart app (by set new root view controller).
-		- If endpoint in Settings was changed, set new endpoint value to User defaults.
-
+This is how we config observer for `SettingManager`:
+	
 ```
+final class SettingsManager {
+	 ...
     private func configObserver() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(udValuesDidChange),
@@ -236,6 +245,8 @@ final class SettingsManager {
             change(newEndpoint, forInfoValueWith: .kEndpoint)
         }
     }
+    ...
+}
 ```
 
 Okay, that's what we handle in `SettingManager`. Now we move to making the view controller listen to the changes of User default values. Look at class `WelcomeVC`. We config observer to `UserDefaults.didChangeNotification` event. Everytime values change, we set content of `endpointLabel` again. Moreover, we config `welcomeView` and `endpointLabel` before showing this screen.
