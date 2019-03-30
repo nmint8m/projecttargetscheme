@@ -1,4 +1,4 @@
-# <img src="./Images/img-xcode.png" height="30"> How to config an iOS project
+# <img src="./Images/img-xcode.png" height="30"> Manage Targets - Schemes in an iOS Project
 
 _Written by: **Nguyen Minh Tam**_
 
@@ -8,19 +8,29 @@ _Written by: **Nguyen Minh Tam**_
 
 ## Goal:
 
-- Understand how to config an iOS project in multiple Schemes (several environment like: Debug, Staging, Release)
-- Understand how to config an iOS project with multiple Targets (serveral small apps inside that project)
-- Understanding how to config the Setting of application and how to handle it.
+At the end of the day, we will:
+
+- Understand these Xcode concepts: target, scheme, build setting, workspace.
+- Know how to manage these concepts in Xcode.
+- Know how to work with `*.plist` and `*.xcconfig`.
 
 ## Contents:
 
-- [ ] Working with multiple Targets. [See detail][Targets].
-- [ ] Working with multiple Targets and Scheme using `*.xcconfig`. [See detail][Xcconfig].
-- [x] How to config the setting of application and how to handle it by using `Settings.bundle`. [See detail][Settings].
+I recommend to read the first and the third sections for saving your time. Because these two sections are basic configuring for real project. After that, you can go back to the second section if you really need.
 
-- [Xcode Concepts](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Targets.html)
-- [Xcode Overview](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/index.html)
+- [x] [Introduce configuring target and builds for an iOS application][Introduce]
+- [ ] [Configure targets and builds for an iOS application][Config]
+- [ ] [Configure targets and builds for an iOS application with *.xcconfig][ConfigWithXcconfig]
 
-[Targets]: ./WorkingWithMultipleTargets.md
-[Xcconfig]: ./UsingXCConfig.md
-[Settings]: ./UsingSettingsBundle.md
+**Related topics:**
+
+- How to use Settings.bundle in iOS Project. [See detail][Settings].
+
+---
+
+[ProjectTargetScheme]: https://github.com/nmint8m/projecttargetscheme
+[Introduce]: ./01-Introduce.md
+[Config]: ./02-Config.md
+[ConfigWithXcconfig]: ./03-ConfigWithXcconfig.md
+
+[Settings]: https://github.com/nmint8m/settingsbundle
