@@ -100,3 +100,37 @@ I will talk ablout Xcode scheme later in this section. Now, we go to what is bui
 <center>
 	<img src="./Images/sce_schememenu.png" width="600">
 </center>
+
+### Xcode Workspace
+
+- A workspace is an Xcode document that groups projects and other documents so you can work on them together. 
+- To organizing all the files in each Xcode project, a workspace provides implicit and explicit relationships among the included projects and their targets.
+- You can use the workspace’s default build directory or you can specify one. Note that if a project specifies a build directory, that directory is overridden by the build directory of whatever workspace the project is in at the time you build the project.
+
+**Related topics:**
+
+- Go back to [Manage Targets - Schemes in an iOS Project][ProjectTargetScheme].
+- [Configure targets and builds for an iOS application][Config]
+- [Configure targets and builds for an iOS application with *.xcconfig][ConfigWithXcconfig]
+- How to use Settings.bundle in iOS Project. [See detail][Settings].
+
+**Reference:**
+
+- [x] [Xcode Concepts][Workspace]
+- [ ] [Xcode Help][Help]
+
+---
+
+[ProjectTargetScheme]: https://github.com/nmint8m/projecttargetscheme
+[Introduce]: ./01-Introduce.md
+[Config]: ./02-Config.md
+[ConfigWithXcconfig]: ./03-ConfigWithXcconfig.md
+[Settings]: https://github.com/nmint8m/settingsbundle
+
+[Target]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Targets.html
+[Project]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Projects.html
+[BuildSetting]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Build_Settings.html
+[Workspace]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Workspace.html
+[Scheme]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html
+
+[Help]: https://help.apple.com/xcode/mac/current/
