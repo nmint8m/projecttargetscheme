@@ -4,7 +4,11 @@ _Written by: **Nguyen Minh Tam**_
 
 **Menu**
 
-
+- [Xcode Target](#xcode-target)
+- [Xcode Project](#xcode-project)
+- [Build Settings](#build-setting)
+- [Xcode Scheme](#xcode-scheme)
+- [Xcode Project](#xcode-project)
 
 ## Goal
 
@@ -64,7 +68,7 @@ You can find out more detail about what we can do with target in [this doc][Conf
 
 I will talk ablout Xcode scheme later in this section. Now, we go to what is build settings and what it does affect to the project and target level.
 
-### Build Settings
+## Build Settings
 
 - A build setting is a variable that contains information about how a particular aspect of a product’s build process should be performed.
 - You can specify build settings at the project or target level. 
@@ -73,13 +77,15 @@ I will talk ablout Xcode scheme later in this section. Now, we go to what is bui
 
 <center>
 	<img src="./Images/bs_buildsettings_projectlevel.png" width="600">
-	<br>
-	Project-level build setting: In Project navigator, choose Project > In project and targets list, choose Project > Choose Build Settings
-	<br>
-	<img src="./Images/bs_buildsettings_targetlevel.png" width="600">
-	<br>
-	Target-level (product-level) build setting: In Project navigator, choose Project > In project and targets list, choose Target > Choose Build Settings
 </center>
+	
+Project-level build setting: In **Project navigator**, choose **Project** > In project and targets list, choose **Project** > Choose **Build Settings**
+
+<center>
+	<img src="./Images/bs_buildsettings_targetlevel.png" width="600">
+</center>
+
+Target-level (product-level) build setting: In **Project navigator**, choose **Project** > In project and targets list, choose **Target** > Choose **Build Settings**
 
 - A build setting in Xcode has two parts: 
 	- Setting title: identifies the build setting and can be used within other settings
@@ -101,7 +107,7 @@ I will talk ablout Xcode scheme later in this section. Now, we go to what is bui
 	<img src="./Images/sce_schememenu.png" width="600">
 </center>
 
-### Xcode Workspace
+## Xcode Workspace
 
 - A workspace is an Xcode document that groups projects and other documents so you can work on them together. 
 - To organizing all the files in each Xcode project, a workspace provides implicit and explicit relationships among the included projects and their targets.
