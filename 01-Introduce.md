@@ -63,3 +63,27 @@ You can find out more detail about what we can do with target in [this doc][Conf
 - Use Xcode schemes to specify which target, build configuration, and executable configuration is active at a given time. 
 
 I will talk ablout Xcode scheme later in this section. Now, we go to what is build settings and what it does affect to the project and target level.
+
+### Build Settings
+
+- A build setting is a variable that contains information about how a particular aspect of a product’s build process should be performed.
+- You can specify build settings at the project or target level. 
+	- Each project-level build setting applies to all targets unless explicitly overridden by the build settings for a specific target.
+	- Each target organizes the source files needed to build one product. A build configuration specifies a set of build settings used to build a target's product in a particular way. For example, it is common to have separate build configurations for debug and release builds of a product.
+
+<center>
+	<img src="./Images/bs_buildsettings_projectlevel.png" width="600">
+	<br>
+	Project-level build setting: In Project navigator, choose Project > In project and targets list, choose Project > Choose Build Settings
+	<br>
+	<img src="./Images/bs_buildsettings_targetlevel.png" width="600">
+	<br>
+	Target-level (product-level) build setting: In Project navigator, choose Project > In project and targets list, choose Target > Choose Build Settings
+</center>
+
+- A build setting in Xcode has two parts: 
+	- Setting title: identifies the build setting and can be used within other settings
+	- Definition: is a constant or a formula Xcode uses to determine the value of the build setting at build time. Ex: display name, which is used to display the build setting in the Xcode UI.
+- You can:
+	- Create user-defined build settings for your project / target. 
+	- Specify conditional build settings. The value of a conditional build setting depends on whether one or more prerequisites are met.
