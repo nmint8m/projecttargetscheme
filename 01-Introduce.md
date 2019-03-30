@@ -87,3 +87,16 @@ I will talk ablout Xcode scheme later in this section. Now, we go to what is bui
 - You can:
 	- Create user-defined build settings for your project / target. 
 	- Specify conditional build settings. The value of a conditional build setting depends on whether one or more prerequisites are met.
+
+### Xcode Scheme
+
+- An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.
+
+- You can:
+	- Define serveral schemes, but only one can be active at a time.
+	- Specify whether a scheme should be stored in a project—in which case it’s available in every workspace that includes that project, or in the workspace—in which case it’s available only in that workspace.
+	- When you select an active scheme, you also select a run destination (iPhone8 / ...).
+
+<center>
+	<img src="./Images/sce_schememenu.png" width="600">
+</center>
