@@ -45,3 +45,21 @@ As you can see, we can adjust several settings for the targets in your project, 
 - Build rules settings.
 
 You can find out more detail about what we can do with target in [this doc][Config]. Right now I am going to talk about Xcode project, which you saw in the Project navigator in the previous image.
+
+## Xcode Project
+
+- An Xcode project is a repository for all the files, resources, and information required to build one or more software products. It contains:
+	- All the elements used to build your products and maintains the relationships between those elements. 
+	- One or more targets. 
+	- Default project build settings for all the targets in the project (each target can also specify its own build settings, which override the project build settings).
+
+- An Xcode project file contains the following information:
+	- References to source files:
+		- Source code, Libraries and frameworks, Resource files, Image files, Groups used to organize the source files
+		- Project-level build configurations. You can specify more than one build configuration for a project. For example: A project have debug and release build settings. We will see an example in [this project][ConfigWithXcconfig].
+	- Targets.
+	- The executable environments that can be used to debug or test the program. You can see more detail in this [official doc][Project].
+- A project can stand alone or can be included in a workspace.
+- Use Xcode schemes to specify which target, build configuration, and executable configuration is active at a given time. 
+
+I will talk ablout Xcode scheme later in this section. Now, we go to what is build settings and what it does affect to the project and target level.
