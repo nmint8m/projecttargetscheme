@@ -217,6 +217,21 @@ Drag build settings into a configuration settings file
 ### Configure build phases
 
 See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev50bab713d)
+
+### Configure capabilities
+
+#### Add a capability to a target
+
+<center>
+	<img src="./Images/pe_cap_add_capabilities.png" width="600">
+</center>
+
+#### Others
+
+- Configure app groups
+
+## Xcode Scheme
+
 ### Configure schemes
 
 <center>
@@ -243,6 +258,10 @@ See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev
 
 - Specify runtime arguments and environment variables for your app
 - Switch schemes and destinations
+
+## Xcode Workspace
+
+
 
 **Related topics:**
 
