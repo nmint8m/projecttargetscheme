@@ -5,13 +5,9 @@ _Written by: **Nguyen Minh Tam**_
 **Menu**
 
 - [Xcode Target](#xcode-target)
-	- Edit general settings
-	- Edit Info settings
-	- Edit build settings
-	- Configure build phases
-	- Configure capabilities
-- [Xcode Project](#xcode-project)
 - [Build Settings](#build-setting)
+- [Build phases](#build-phases)
+- [Capabilities](#capabilities)
 - [Xcode Scheme](#xcode-scheme)
 - [Xcode Workspace](#xcode-workspace)
 
@@ -35,6 +31,8 @@ We can adjust these settings for the targets in your project:
 - Edit build settings
 - Configure build phases
 - Configure capabilities
+
+In this part, I will mentioned [Edit build settings](#build-settings), [Configure build phases](#build-phases) and [Configure capabilities](#capabilities) in seperated parts.
 
 ### Edit general settings
 
@@ -147,7 +145,7 @@ See more in this [official doc](https://help.apple.com/xcode/mac/current/#/dev0d
 
 See more in this [official doc](https://help.apple.com/xcode/mac/current/#/devddd273fdd).
 
-### Edit build settings
+## Build settings
 
 A build setting provides information necessary for building the product of a target.
 
@@ -155,7 +153,7 @@ A build setting provides information necessary for building the product of a tar
 	<img src="./Images/bs_buildsettings.png" width="600">
 </center>
 
-#### Configure build settings
+### Configure build settings
 
 <center>
 	<img src="./Images/bs_search.png" width="600">
@@ -166,7 +164,7 @@ A build setting provides information necessary for building the product of a tar
 	- Customized: Shows only build settings that have been customized for the selected project or target.
 	- All: Shows all build settings.
 
-#### Evaluate build setting value inheritance
+### Evaluate build setting value inheritance
 
 Build settings have default values, based on architecture and SDK. These defaults can be overridden by defining project-level values and target-level values, and by adding a Configuration Settings File (*.xcconfig ) to your project. You can view the inheritance hierarchy, to determine whether build setting values are defined at the default, project, target, or build configuration file level.
 
@@ -180,7 +178,7 @@ Highlighted values indicates values that take precedence. The hierarchy of level
 	<img src="./Images/bs_buildsetting_precedence.png" width="300">
 </center>
 
-#### Add a build configuration (xcconfig) file
+### Add a build configuration (xcconfig) file
 
 Add a Configuration Settings File to your project to allow build settings to be edited outside of Xcode.
 
@@ -214,19 +212,19 @@ Drag build settings into a configuration settings file
 	<img src="./Images/bs_buildconfigurationfile5.png" width="600">
 </center>
 
-### Configure build phases
+## Build phases
 
 See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev50bab713d)
 
-### Configure capabilities
+## Capabilities
 
-#### Add a capability to a target
+### Add a capability to a target
 
 <center>
 	<img src="./Images/pe_cap_add_capabilities.png" width="600">
 </center>
 
-#### Others
+### Others
 
 - Configure app groups
 
@@ -258,10 +256,6 @@ See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev
 
 - Specify runtime arguments and environment variables for your app
 - Switch schemes and destinations
-
-## Xcode Workspace
-
-
 
 **Related topics:**
 
