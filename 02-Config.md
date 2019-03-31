@@ -217,6 +217,33 @@ Drag build settings into a configuration settings file
 ### Configure build phases
 
 See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev50bab713d)
+### Configure schemes
+
+<center>
+	<img src="./Images/sce_schememenu.png" width="600">
+</center>
+
+<center>
+	<img src="./Images/sce_schemeeditor.png" width="600">
+</center>
+
+### Add, delete, rename, and share schemes
+
+<center>
+	<img src="./Images/sce_schememanagementdialog.png" width="600">
+</center>
+
+### Build multiple targets
+
+<center>
+	<img src="./Images/sce_schemeeditor_multipletargets.png" width="600">
+</center>
+
+### Others
+
+- Specify runtime arguments and environment variables for your app
+- Switch schemes and destinations
+
 **Related topics:**
 
 - Go back to [Manage Targets - Schemes in an iOS Project][ProjectTargetScheme].
