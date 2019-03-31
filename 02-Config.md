@@ -113,3 +113,36 @@ This target is related to the Xcode target I mentioned in the [previous section]
 <center>
 	<img src="./Images/pe_setlaunchscreen.png" width="600">
 </center>
+
+### Edit Info settings
+
+#### Edit the information property list
+
+The information property list (the Info.plist file in your project) contains key-value pairs that configure your project or target. You can edit these settings on the Info pane for the project or target, or by editing the Info.plist file directly.
+
+<center>
+	<img src="./Images/pe_edit_info_plist.png" width="600">
+</center>
+
+Please note that:
+
+- The Info.plist should be defined the explicit target.
+- The path linking to Infor.plist file in target is defined in tab Build Settings:
+
+<center>
+	<img src="./Images/build_settings_infor_plist_path.png" width="600">
+</center>
+
+To edit the Info.plist file directly, Control-click it in the Project navigator and choose Open As > Source Code or Open As > Property List.
+
+#### Add export compliance keys
+
+See more in this [official doc](https://help.apple.com/xcode/mac/current/#/dev0dc15d044).
+
+#### Set the copyright key (macOS)
+
+See more in this [official doc](https://help.apple.com/xcode/mac/current/#/dev0dc15d044).
+
+#### Set supported document types (iOS, macOS)
+
+See more in this [official doc](https://help.apple.com/xcode/mac/current/#/devddd273fdd).
