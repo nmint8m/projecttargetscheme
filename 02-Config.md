@@ -277,6 +277,7 @@ See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev
 [Config]: ./02-Config.md
 [ConfigWithXcconfig]: ./03-ConfigWithXcconfig.md
 [Settings]: https://github.com/nmint8m/settingsbundle
+[InfoPlist]: https://developer.apple.com/documentation/bundleresources/information_property_list
 
 [Target]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Targets.html
 [Project]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Projects.html
