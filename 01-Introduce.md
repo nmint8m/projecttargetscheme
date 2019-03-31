@@ -8,7 +8,7 @@ _Written by: **Nguyen Minh Tam**_
 - [Xcode Project](#xcode-project)
 - [Build Settings](#build-setting)
 - [Xcode Scheme](#xcode-scheme)
-- [Xcode Project](#xcode-project)
+- [Xcode Workspace](#xcode-workspace)
 
 ## Goal
 
@@ -94,7 +94,7 @@ Target-level (product-level) build setting: In **Project navigator**, choose **P
 	- Create user-defined build settings for your project / target. 
 	- Specify conditional build settings. The value of a conditional build setting depends on whether one or more prerequisites are met.
 
-### Xcode Scheme
+## Xcode Scheme
 
 - An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.
 
