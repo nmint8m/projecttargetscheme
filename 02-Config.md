@@ -146,3 +146,74 @@ See more in this [official doc](https://help.apple.com/xcode/mac/current/#/dev0d
 #### Set supported document types (iOS, macOS)
 
 See more in this [official doc](https://help.apple.com/xcode/mac/current/#/devddd273fdd).
+
+### Edit build settings
+
+A build setting provides information necessary for building the product of a target.
+
+<center>
+	<img src="./Images/bs_buildsettings.png" width="600">
+</center>
+
+#### Configure build settings
+
+<center>
+	<img src="./Images/bs_search.png" width="600">
+</center>
+
+- Filter build settings
+	- Basic: Shows the most common build settings.
+	- Customized: Shows only build settings that have been customized for the selected project or target.
+	- All: Shows all build settings.
+
+#### Evaluate build setting value inheritance
+
+Build settings have default values, based on architecture and SDK. These defaults can be overridden by defining project-level values and target-level values, and by adding a Configuration Settings File (*.xcconfig ) to your project. You can view the inheritance hierarchy, to determine whether build setting values are defined at the default, project, target, or build configuration file level.
+
+<center>
+	<img src="./Images/bs_buildsettings_displaylevels.png" width="600">
+</center>
+
+Highlighted values indicates values that take precedence. The hierarchy of level precedence is as follows:
+
+<center>
+	<img src="./Images/bs_buildsetting_precedence.png" width="300">
+</center>
+
+#### Add a build configuration (xcconfig) file
+
+Add a Configuration Settings File to your project to allow build settings to be edited outside of Xcode.
+
+- Add a build configuration (xcconfig) file
+- Do not need to click any Target checkboxes.
+
+<center>
+	<img src="./Images/bs_buildconfigurationfile.png" width="600">
+</center>
+
+<center>
+	<img src="./Images/bs_buildconfigurationfile2.png" width="600">
+</center>
+
+[Configuration Settings File (xcconfig) format](https://help.apple.com/xcode/mac/current/#/dev745c5c974)
+
+Map a configuration settings file to a build configuration
+
+<center>
+	<img src="./Images/bs_buildconfigurationfile4.png" width="600">
+</center>
+
+Drag build settings into a configuration settings file
+- Open the Build Settings pane in the project editor.
+- Open the assistant editor.
+- If the configuration settings file isn’t displayed in the assistant editor, use the jump bar in the assistant editor to display it.
+- Select a build setting in the Build Settings pane and drag it into the configuration settings file in the assistant editor.
+- The build setting is inserted into the configuration settings file.
+
+<center>
+	<img src="./Images/bs_buildconfigurationfile5.png" width="600">
+</center>
+
+### Configure build phases
+
+See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev50bab713d)
