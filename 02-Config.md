@@ -217,3 +217,31 @@ Drag build settings into a configuration settings file
 ### Configure build phases
 
 See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev50bab713d)
+**Related topics:**
+
+- Go back to [Manage Targets - Schemes in an iOS Project][ProjectTargetScheme].
+- [Introduce configuring targets and builds for an iOS application][Introduce]
+- [Configure targets and builds for an iOS application with *.xcconfig][ConfigWithXcconfig]
+- How to use Settings.bundle in iOS Project. [See detail][Settings].
+
+**Reference:**
+
+- [x] [Xcode Concepts][Workspace]
+- [ ] [Xcode Help][Help]
+- [ ] [Information Property List Key Reference][InfoPlist]
+
+---
+
+[ProjectTargetScheme]: https://github.com/nmint8m/projecttargetscheme
+[Introduce]: ./01-Introduce.md
+[Config]: ./02-Config.md
+[ConfigWithXcconfig]: ./03-ConfigWithXcconfig.md
+[Settings]: https://github.com/nmint8m/settingsbundle
+
+[Target]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Targets.html
+[Project]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Projects.html
+[BuildSetting]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Build_Settings.html
+[Workspace]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Workspace.html
+[Scheme]: https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html
+
+[Help]: https://help.apple.com/xcode/mac/current/
