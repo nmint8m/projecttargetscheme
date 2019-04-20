@@ -37,6 +37,7 @@ In this part, I will mentioned [Edit build settings](#build-settings), [Configur
 ### Edit general settings
 
 What we can do in general settings:
+
 - Edit identity settings
 - Edit signing settings
 - Edit deployment info settings
@@ -116,7 +117,7 @@ This target is related to the Xcode target I mentioned in the [previous section]
 
 #### Edit the information property list
 
-The information property list (the Info.plist file in your project) contains key-value pairs that configure your project or target. You can edit these settings on the Info pane for the project or target, or by editing the Info.plist file directly.
+The information property list (the `Info.plist` file in your project) contains key-value pairs that configure your project or target. You can edit these settings on the Info pane for the project or target, or by editing the `Info.plist` file directly.
 
 <center>
 	<img src="./Images/pe_edit_info_plist.png" width="600">
@@ -124,14 +125,14 @@ The information property list (the Info.plist file in your project) contains key
 
 Please note that:
 
-- The Info.plist should be defined the explicit target.
-- The path linking to Infor.plist file in target is defined in tab Build Settings:
+- The `Info.plist` should be defined the explicit target.
+- The path linking to `Info.plist` file in target is defined in tab Build Settings:
 
 <center>
 	<img src="./Images/build_settings_infor_plist_path.png" width="600">
 </center>
 
-To edit the Info.plist file directly, Control-click it in the Project navigator and choose Open As > Source Code or Open As > Property List.
+To edit the `Info.plist` file directly, Control-click it in the Project navigator and choose **Open As > Source Code or Open As > Property List**.
 
 #### Add export compliance keys
 
@@ -202,6 +203,7 @@ Map a configuration settings file to a build configuration
 </center>
 
 Drag build settings into a configuration settings file
+
 - Open the Build Settings pane in the project editor.
 - Open the assistant editor.
 - If the configuration settings file isn’t displayed in the assistant editor, use the jump bar in the assistant editor to display it.
@@ -256,6 +258,8 @@ See detail in this [official doc](https://help.apple.com/xcode/mac/current/#/dev
 
 - Specify runtime arguments and environment variables for your app
 - Switch schemes and destinations
+
+Now it is the end of the document. In the next path, I will talk about how to configure real project. Let's check out!
 
 **Related topics:**
 

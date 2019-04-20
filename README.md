@@ -19,8 +19,8 @@ At the end of the day, we will:
 I recommend to read the first and the third sections for saving your time. Because these two sections are basic configuring for real project. After that, you can go back to the second section if you really need.
 
 - [x] [Introduce configuring target and builds for an iOS application][Introduce]
-- [ ] [Configure targets and builds for an iOS application][Config]
-- [ ] [Configure targets and builds for an iOS application with *.xcconfig][ConfigWithXcconfig]
+- [x] [Configure targets and builds for an iOS application][Config]
+- [x] [Configure targets and builds for an iOS application with *.xcconfig][ConfigWithXcconfig]
 
 **Related topics:**
 

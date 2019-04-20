@@ -113,6 +113,8 @@ Target-level (product-level) build setting: In **Project navigator**, choose **P
 - To organizing all the files in each Xcode project, a workspace provides implicit and explicit relationships among the included projects and their targets.
 - You can use the workspace’s default build directory or you can specify one. Note that if a project specifies a build directory, that directory is overridden by the build directory of whatever workspace the project is in at the time you build the project.
 
+This is the end of Xcode concept introduction. Now we understand these concepts and how to interact with them in Xcode basically. In the next part of document, I will go to details about how to configure those things. But I do recommend you to take a look at this demo about [Configure targets and builds for an iOS application with *.xcconfig][ConfigWithXcconfig] before going to [Configure targets and builds for an iOS application][Config] because it is similar to what we would do in real project!
+
 **Related topics:**
 
 - Go back to [Manage Targets - Schemes in an iOS Project][ProjectTargetScheme].

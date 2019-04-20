@@ -1,0 +1,15 @@
+//
+//  STG.xcconfig
+//  Demo
+//
+//  Created by Tam Nguyen M. on 4/20/19.
+//  Copyright © 2019 Tam Nguyen M. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = [STG]-$(TARGET_NAME)
+APP_VERSION = 2.0
+APP_BUNDLE_ID = dev.t8m.demo.$(TARGET_NAME).stg
+APP_ICON = AppIcon-STG
